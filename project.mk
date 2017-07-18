@@ -25,7 +25,7 @@ FASTQ_FILES=SRR980481_1.fastq.gz SRR980481_2.fastq.gz
 ## The species that this data is
 SPECIES=homo_sapiens
 ## The species to align it to; usually the same as $(SPECIES)
-# ALIGNMENT_SPECIES=$(SPECIES)
+#ALIGNMENT_SPECIES=$ (SPECIES)
 
 ## The species name in ensembl (usually the same as $(SPECIES) with
 ## the first letter capitalized)
@@ -67,3 +67,5 @@ STRIP_PATCHES_OPTIONS=--valid-chr='^(?:chr)?[12]?\d|MT|[XY]$$'
 
 # If you do not wish to trim, uncomment the following
 # NOTRIM=1
+
+TRIMMOMATIC_OPTIONS?=ILLUMINACLIP:$(TRIMMOMATIC_FASTA_PATH)/TruSeq2-SE.fa:2:20:10
